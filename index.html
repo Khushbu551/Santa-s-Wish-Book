@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Santa's Wish Book</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+
+        <script src="https://kit.fontawesome.com/b8d355edd3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Background with Snow Effect -->
+     <div class="snowflakes" aria-hidden=" true">
+       <div class="snowflake">&#10052</div>
+       <div class="snowflake">&#10052</div>
+       <div class="snowflake">&#10052</div>
+       <div class="snowflake">&#10052</div>
+       <div class="snowflake">&#10052</div>
+     </div>
+
+     <!-- previous Button -->
+
+     <button id="prev-btn" class="golden-star">
+        <i class="fas fa-arrow-circle-left"></i>
+     </button>
+
+     <!-- Book -->
+      <div id="book" class="book">
+
+        <!-- Paper 1 -->
+        <div id="p1" class="paper">
+           <div class="front">
+           <div id="f1" class="front-content">
+            <img src="images/p.1.jpg" alt="Front img" class="front-img">
+            <h1> 
+              <span class="line1">Santa's</span>
+              <span class="line2">Wish</span>
+              <span class="line3">Book</span>
+            </h1>
+           </div>
+           </div>
+           
+           <div class="back">
+           <div id="b1" class="back-content">
+            <img src="images/b.1.jpg" alt="back image" class="back-img">
+           </div>
+           </div>
+        </div>
+
+         <!-- Paper 2 -->
+         <div id="p2" class="paper">
+          <div class="front">
+          <div id="f2" class="front-content">
+           <h1 id="front-2">Wishing in Functions</h1>
+           <pre class="code-block">
+            <code> 
+            <span class="keyword"> function </span> sendChristmasWishes(teacher) {
+              <span class="keyword">let </span> wishes = {
+                joy: <span class="string">"Infinite"</span>,
+                knowledge: <span class="string">  "Unlimited" </span>,
+                success: <span class="string"> "Guaranteed"</span>
+              };
+              console.log( <span class="string"> 'Merry Christmas, ${teacher}!'</span> );
+            }
+            sendChristmasWishes ( <span class="string"> "To Teacher"</span> );
+          </code>
+           </pre>
+          </div>
+          </div>
+          
+          <div class="back">
+          <div id="b2" class="back-content">
+            <img src="images/p.3.webp" alt="back-img" class="back-img">
+          </div>
+          </div>
+       </div>
+      
+        <!-- Paper 3 -->
+        <div id="p3" class="paper">
+          <div class="front">
+          <div id="f3" class="front-content">
+          <div class="letter-style">
+            <p class="letter-message">
+              Dear Teacher,<br><br>
+              Your teaching style is just like a well-documented code-clear, logical and easy to understand.
+              A great coder fixes every bug, and a great teacher clears every doubt. You've taught us the perfect combination of both. <br><br>
+            </p>
+            <p>  Thank you, and Merry Christmas! </p>
+
+            <p class="signature">With warm regards,<br>Khushi</p>
+          </div>
+          </div>
+          </div>
+          
+          <div class="back">
+          <div id="b3" class="back-content">
+            <img src="images/p.4.jpg" alt="back-img" class="back-img">
+          </div>
+          </div>
+       </div>
+
+      </div>
+
+     <!-- Next Button -->
+      <button id="next-btn" class="golden-star">
+        <i class="fas fa-arrow-circle-right"></i>
+      </button>
+</body>
+</html>

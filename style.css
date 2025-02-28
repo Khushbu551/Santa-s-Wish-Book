@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(images/back.2.jpg) no-repeat center center fixed;
+  height: 100vh;
+  display: flex;
+  color: white;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  font-family: "Courier New" monospace;
+}
+
+.snowflakes {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  font-size: 2rem;
+  opacity: 0.8;
+  animation: fall 3s linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+/* Book Styles */
+
+.book {
+  position: relative;
+  width: 350px;
+  height: 500px;
+  transition: transform 0.5s;
+}
+
+/* Pages */
+.paper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  perspective: 1500px;
+}
+
+.front,
+.back {
+  background-color: white;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+
+.front-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.front-content h1 {
+  font-size: 2rem;
+  color: #756507;
+  text-shadow: 2px 1px 1px rgba(255, 0, 0, 0.411);
+  font-family: "Georgia", serif;
+  position: absolute;
+  z-index: 1;
+  top: -1%;
+  right: 10px;
+  text-align: right;
+  line-height: 1.5;
+}
+.front-content h1 .line1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+.front-content h1 .line2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.front-content h1 .line3 {
+  font-size: 2.5rem;
+  font-style: italic;
+}
+
+.front {
+  z-index: 1;
+  backface-visibility: hidden;
+  border-left: 3px solid powderblue;
+}
+.back-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.back-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+/* Front 2 */
+.code-block {
+  background-color: #282c34;
+  color: #ffffff;
+  font-family: "Courier New", Courier, monospace;
+  padding: 10px 25px;
+  margin-top: 5px;
+  border-radius: 5px;
+  white-space: nowrap;
+  word-break: break-word;
+  font-size: 16px;
+  line-height: 1.5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+pre.code-block code {
+  display: block;
+  white-space: pre-wrap;
+}
+pre.code-block .keyword {
+  color: #ffd700;
+  font: bold;
+}
+pre.code-block .string {
+  color: #adff2f;
+  font-style: italic;
+}
+#front-2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #e7e7e7;
+}
+/* front 3 */
+.letter-style {
+  font-family: "Dancing Script", cursive;
+  font-size: 1.1rem;
+  color: #4b2e39;
+  background: #fdf3e6;
+  padding: 20px;
+  border: 2px solid #d4b996;
+  border-radius: 8px;
+  width: 90%;
+  height: 90%;
+  margin-top: 6px;
+  line-height: 1.8;
+  text-align: left;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.letter-message {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.signature {
+  font-family: "Pacifico", cursive;
+  font-size: 1.5rem;
+  margin-top: 20px;
+  text-align: right;
+  color: #4b2e39;
+}
+.back {
+  z-index: 0;
+}
+
+.front-content,
+.back-content {
+  width: 100%;
+  height: -100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-content {
+  transform: rotateY(-180deg);
+}
+
+/* paper flip effect */
+.flipped .front,
+.flipped .back {
+  transform: rotateY(-180deg);
+}
+
+/* Controll Button */
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 10px;
+  transition: transform 0.5s;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover i {
+  color: #636363;
+}
+i {
+  font-size: 50px;
+  color: #9b6f00;
+  box-shadow: 0px 4px 10px rgba(139, 101, 8, 0.6);
+  border-radius: 50%;
+}
+
+/* Paper stack oder */
+#p1 {
+  z-index: 3;
+}
+
+#p2 {
+  z-index: 2;
+}
+
+#p3 {
+  z-index: 1;
+}
