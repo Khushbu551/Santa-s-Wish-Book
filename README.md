@@ -25,6 +25,8 @@
 - **Magical Snowfall Effect**
 - **Background Music**
 
+**Note:** THis project was built for learning purposes to explore and practice [mention technologies]. Security and production-level optimizations are not the primary focus.
+
 ## Preview
 
 ![ Santa's Wish Book](/images/pic.png)
